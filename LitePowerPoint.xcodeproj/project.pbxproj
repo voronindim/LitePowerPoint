@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2859BA8125BA078000BEE87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA8025BA078000BEE87B /* AppDelegate.swift */; };
+		2859BA8325BA078000BEE87B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA8225BA078000BEE87B /* SceneDelegate.swift */; };
+		2859BA8525BA078000BEE87B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA8425BA078000BEE87B /* ViewController.swift */; };
+		2859BA8825BA078000BEE87B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2859BA8625BA078000BEE87B /* Main.storyboard */; };
+		2859BA8A25BA078200BEE87B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2859BA8925BA078200BEE87B /* Assets.xcassets */; };
+		2859BA8D25BA078200BEE87B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2859BA8B25BA078200BEE87B /* LaunchScreen.storyboard */; };
+		2859BA9F25BA08EF00BEE87B /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA9E25BA08EF00BEE87B /* Shape.swift */; };
+		2859BAA425BA09DE00BEE87B /* CommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAA325BA09DE00BEE87B /* CommonTypes.swift */; };
+		2859BAA825BA0DBE00BEE87B /* CreateRandomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAA725BA0DBE00BEE87B /* CreateRandomUIColor.swift */; };
+		2859BAAB25BA0E9000BEE87B /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAAA25BA0E9000BEE87B /* Canvas.swift */; };
+		2859BAAF25BA1BEE00BEE87B /* CanvasAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */; };
+		2859BAB325BA1C1500BEE87B /* ShapeAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */; };
+		9991E73125D3E57E1BE3FE14 /* Pods_LitePowerPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2859BA7D25BA078000BEE87B /* LitePowerPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitePowerPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2859BA8025BA078000BEE87B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2859BA8225BA078000BEE87B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2859BA8425BA078000BEE87B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2859BA8725BA078000BEE87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2859BA8925BA078200BEE87B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2859BA8C25BA078200BEE87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2859BA8E25BA078200BEE87B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2859BA9E25BA08EF00BEE87B /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		2859BAA325BA09DE00BEE87B /* CommonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTypes.swift; sourceTree = "<group>"; };
+		2859BAA725BA0DBE00BEE87B /* CreateRandomUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRandomUIColor.swift; sourceTree = "<group>"; };
+		2859BAAA25BA0E9000BEE87B /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasAppModel.swift; sourceTree = "<group>"; };
+		2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeAppModel.swift; sourceTree = "<group>"; };
+		7D5C76E2A0AE9BF85C0DB775 /* Pods-LitePowerPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitePowerPoint.release.xcconfig"; path = "Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint.release.xcconfig"; sourceTree = "<group>"; };
+		8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LitePowerPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2061EA86913181B4408E87D /* Pods-LitePowerPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitePowerPoint.debug.xcconfig"; path = "Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2859BA7A25BA078000BEE87B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9991E73125D3E57E1BE3FE14 /* Pods_LitePowerPoint.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E11837A0BA0223E5C13D6E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2061EA86913181B4408E87D /* Pods-LitePowerPoint.debug.xcconfig */,
+				7D5C76E2A0AE9BF85C0DB775 /* Pods-LitePowerPoint.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2859BA7425BA078000BEE87B = {
+			isa = PBXGroup;
+			children = (
+				2859BA7F25BA078000BEE87B /* LitePowerPoint */,
+				2859BA7E25BA078000BEE87B /* Products */,
+				0E11837A0BA0223E5C13D6E9 /* Pods */,
+				2C30F88C48BCE41503E316EB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2859BA7E25BA078000BEE87B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2859BA7D25BA078000BEE87B /* LitePowerPoint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2859BA7F25BA078000BEE87B /* LitePowerPoint */ = {
+			isa = PBXGroup;
+			children = (
+				2859BAA225BA09C400BEE87B /* Common */,
+				2859BA9C25BA08C100BEE87B /* Domain */,
+				2859BAAD25BA1BDB00BEE87B /* App */,
+				2859BA8025BA078000BEE87B /* AppDelegate.swift */,
+				2859BA8225BA078000BEE87B /* SceneDelegate.swift */,
+				2859BA8425BA078000BEE87B /* ViewController.swift */,
+				2859BA8625BA078000BEE87B /* Main.storyboard */,
+				2859BA8925BA078200BEE87B /* Assets.xcassets */,
+				2859BA8B25BA078200BEE87B /* LaunchScreen.storyboard */,
+				2859BA8E25BA078200BEE87B /* Info.plist */,
+			);
+			path = LitePowerPoint;
+			sourceTree = "<group>";
+		};
+		2859BA9C25BA08C100BEE87B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2859BA9E25BA08EF00BEE87B /* Shape.swift */,
+				2859BAAA25BA0E9000BEE87B /* Canvas.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2859BAA225BA09C400BEE87B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2859BAA325BA09DE00BEE87B /* CommonTypes.swift */,
+				2859BAA725BA0DBE00BEE87B /* CreateRandomUIColor.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2859BAAD25BA1BDB00BEE87B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2859BAB525BA1C4100BEE87B /* Model */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2859BAB525BA1C4100BEE87B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */,
+				2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C30F88C48BCE41503E316EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2859BA7C25BA078000BEE87B /* LitePowerPoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2859BA9125BA078200BEE87B /* Build configuration list for PBXNativeTarget "LitePowerPoint" */;
+			buildPhases = (
+				97B89277E073B9E26FC426ED /* [CP] Check Pods Manifest.lock */,
+				2859BA7925BA078000BEE87B /* Sources */,
+				2859BA7A25BA078000BEE87B /* Frameworks */,
+				2859BA7B25BA078000BEE87B /* Resources */,
+				E68599FB4E407F9FA6452BB1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LitePowerPoint;
+			productName = LitePowerPoint;
+			productReference = 2859BA7D25BA078000BEE87B /* LitePowerPoint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2859BA7525BA078000BEE87B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					2859BA7C25BA078000BEE87B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 2859BA7825BA078000BEE87B /* Build configuration list for PBXProject "LitePowerPoint" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2859BA7425BA078000BEE87B;
+			productRefGroup = 2859BA7E25BA078000BEE87B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2859BA7C25BA078000BEE87B /* LitePowerPoint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2859BA7B25BA078000BEE87B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2859BA8D25BA078200BEE87B /* LaunchScreen.storyboard in Resources */,
+				2859BA8A25BA078200BEE87B /* Assets.xcassets in Resources */,
+				2859BA8825BA078000BEE87B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97B89277E073B9E26FC426ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LitePowerPoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E68599FB4E407F9FA6452BB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2859BA7925BA078000BEE87B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2859BAAB25BA0E9000BEE87B /* Canvas.swift in Sources */,
+				2859BAA825BA0DBE00BEE87B /* CreateRandomUIColor.swift in Sources */,
+				2859BA8525BA078000BEE87B /* ViewController.swift in Sources */,
+				2859BAA425BA09DE00BEE87B /* CommonTypes.swift in Sources */,
+				2859BA8125BA078000BEE87B /* AppDelegate.swift in Sources */,
+				2859BAAF25BA1BEE00BEE87B /* CanvasAppModel.swift in Sources */,
+				2859BAB325BA1C1500BEE87B /* ShapeAppModel.swift in Sources */,
+				2859BA8325BA078000BEE87B /* SceneDelegate.swift in Sources */,
+				2859BA9F25BA08EF00BEE87B /* Shape.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2859BA8625BA078000BEE87B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2859BA8725BA078000BEE87B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2859BA8B25BA078200BEE87B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2859BA8C25BA078200BEE87B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2859BA8F25BA078200BEE87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2859BA9025BA078200BEE87B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2859BA9225BA078200BEE87B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2061EA86913181B4408E87D /* Pods-LitePowerPoint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LitePowerPoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.LitePowerPoint";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2859BA9325BA078200BEE87B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D5C76E2A0AE9BF85C0DB775 /* Pods-LitePowerPoint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LitePowerPoint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Dmitrii-Voronin.LitePowerPoint";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2859BA7825BA078000BEE87B /* Build configuration list for PBXProject "LitePowerPoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2859BA8F25BA078200BEE87B /* Debug */,
+				2859BA9025BA078200BEE87B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2859BA9125BA078200BEE87B /* Build configuration list for PBXNativeTarget "LitePowerPoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2859BA9225BA078200BEE87B /* Debug */,
+				2859BA9325BA078200BEE87B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2859BA7525BA078000BEE87B /* Project object */;
+}
