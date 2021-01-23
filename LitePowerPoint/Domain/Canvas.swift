@@ -41,19 +41,23 @@ class Canvas {
     
     func appendShape(_ shape: Shape) {
         shapes.append(shape)
-        _actionOnShape.onNext(.addedShape(.init(index: shapeCount, shape: shape)))
+        updateState(type: .addedShape(.init(index: shapeCount, shape: shape)))
     }
     
-    func insertShapeByIndex(_ index: Int, shape: Shape) {
+    func insertShapeByIndex(_ index: Int, shape: Shape) throws {
+        guard isIndexFromFirstToShapesCount(index) else {
+            throw CanvasError.outOfRange
+        }
         shapes.insert(shape, at: index)
-        _actionOnShape.onNext(.addedShape(.init(index: index, shape: shape)))
+        updateState(type: .addedShape(.init(index: index, shape: shape)))
     }
     
     func deleteShapeByIndex(_ index: Int) throws {
         guard let shape = try? getShapeByIndex(index) else {
             throw CanvasError.outOfRange
         }
-        _actionOnShape.onNext(.deletedShape(.init(index: index, shape: shape)))
+        shapes.remove(at: index)
+        updateState(type: .deletedShape(.init(index: index, shape: shape)))
     }
     
     private func getShapeByIndex(_ index: Int) throws -> Shape {
@@ -63,9 +67,21 @@ class Canvas {
         return shapes[index]
     }
     
+    private func updateState(type: ActionType) {
+        switch type {
+        case .addedShape(let data):
+            _actionOnShape.onNext(.addedShape(data))
+        case .deletedShape(let data):
+            _actionOnShape.onNext(.deletedShape(data))
+        }
+    }
+    
 }
 
 extension Canvas {
+    private func isIndexFromFirstToShapesCount(_ index: Int) -> Bool {
+        index >= 0 && index <= self.shapeCount
+    }
     private func isIndexInShapesRange(_ index: Int) -> Bool {
         index >= 0 && index < self.shapeCount
     }

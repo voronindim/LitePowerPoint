@@ -42,32 +42,41 @@ class CanvasAppModel {
         self.canvas.appendShape(.init(frame: shape.frame, type: shape.type))
     }
     
-    func insertShapeByIndex(_ index: Int, shape: Shape) {
-        self.canvas.insertShapeByIndex(index, shape: shape)
+    func insertShapeByIndex(_ index: Int, shape: Shape) throws {
+        guard let _ = try? self.canvas.insertShapeByIndex(index, shape: shape) else {
+            throw CanvasViewModelError.outOfRange
+        }
+        // TODO:
     }
     
     func deleteShapeByIndex(_ index: Int) throws {
         guard let _ = try? self.canvas.deleteShapeByIndex(index) else {
             throw CanvasViewModelError.outOfRange
         }
+        // TODO:
     }
     
     private func subscribeDomainModel(_ state: Observable<ActionType>) {
         state.subscribe(
             onNext: { value in
-                self._viewState.onNext(createNewActionTypeValue(type: value))
+                self._viewState.onNext(self.handleViewState(type: value))
             }
         ).disposed(by: disposeBag)
     }
-}
-
-private func createNewActionTypeValue(type: ActionType) -> ViewActionType {
-    switch type {
-    case .addedShape(let data):
-        return .addedShape(.init(index: data.index, shape: .init(shape: data.shape)))
-    case .deletedShape(let data):
-        return .deletedShape(.init(index: data.index, shape: .init(shape: data.shape)))
+    
+    private func handleViewState(type: ActionType) -> ViewActionType {
+        switch type {
+        case .addedShape(let data):
+            let shape = ShapeAppModel(shape: data.shape)
+            self.shapes.insert(shape, at: data.index)
+            return .addedShape(.init(index: data.index, shape: shape))
+        case .deletedShape(let data):
+            let shape = ShapeAppModel(shape: data.shape)
+            self.shapes.remove(at: data.index)
+            return .deletedShape(.init(index: data.index, shape: shape))
+        }
     }
+    
 }
 
 
