@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectedView" customModule="LitePowerPoint" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="618" height="361"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="62u-Ew-w2e">
+                    <rect key="frame" x="0.0" y="0.5" width="40" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Exq-Iv-iLO"/>
+                        <constraint firstAttribute="width" secondItem="62u-Ew-w2e" secondAttribute="height" multiplier="1:1" id="LFf-ej-vzn"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kj4-Mh-M4N">
+                    <rect key="frame" x="578" y="0.5" width="40" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="KWJ-Jb-Ta3"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-wm-py6">
+                    <rect key="frame" x="0.0" y="321.5" width="40" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Edn-SH-VLT"/>
+                        <constraint firstAttribute="width" secondItem="BP5-wm-py6" secondAttribute="height" multiplier="1:1" id="ccG-Mn-9OQ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="COQ-w7-XV4">
+                    <rect key="frame" x="578" y="321.5" width="40" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="COQ-w7-XV4" secondAttribute="height" multiplier="1:1" id="1ex-eV-1ZN"/>
+                        <constraint firstAttribute="width" constant="40" id="NWb-jx-AVd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="COQ-w7-XV4" secondAttribute="trailing" id="80k-VB-7IQ"/>
+                <constraint firstAttribute="bottom" secondItem="BP5-wm-py6" secondAttribute="bottom" id="9ZU-sW-VPv"/>
+                <constraint firstItem="62u-Ew-w2e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="F5V-NV-HRQ"/>
+                <constraint firstItem="COQ-w7-XV4" firstAttribute="width" secondItem="COQ-w7-XV4" secondAttribute="height" multiplier="1:1" id="F9i-XE-Uu7"/>
+                <constraint firstItem="BP5-wm-py6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="clH-MR-SjQ"/>
+                <constraint firstItem="62u-Ew-w2e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dGA-yH-aEj"/>
+                <constraint firstAttribute="trailing" secondItem="Kj4-Mh-M4N" secondAttribute="trailing" id="pRq-Af-DN0"/>
+                <constraint firstItem="BP5-wm-py6" firstAttribute="width" secondItem="BP5-wm-py6" secondAttribute="height" multiplier="1:1" id="unH-rc-KLe"/>
+                <constraint firstItem="Kj4-Mh-M4N" firstAttribute="width" secondItem="Kj4-Mh-M4N" secondAttribute="height" multiplier="1:1" id="vse-EQ-UNC"/>
+                <constraint firstItem="Kj4-Mh-M4N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="w8Q-ME-Xar"/>
+                <constraint firstAttribute="bottom" secondItem="COQ-w7-XV4" secondAttribute="bottom" id="zqr-9b-Nfs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftBottom" destination="BP5-wm-py6" id="S7w-Vb-RkD"/>
+                <outlet property="leftTop" destination="62u-Ew-w2e" id="GbC-1c-4IU"/>
+                <outlet property="rightBottom" destination="COQ-w7-XV4" id="2iA-c5-74f"/>
+                <outlet property="rightTop" destination="Kj4-Mh-M4N" id="Pjt-fN-Ja1"/>
+            </connections>
+            <point key="canvasLocation" x="285.50724637681162" y="-26.450892857142858"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

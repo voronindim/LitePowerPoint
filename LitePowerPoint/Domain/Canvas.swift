@@ -41,7 +41,7 @@ class Canvas {
     
     func appendShape(_ shape: Shape) {
         shapes.append(shape)
-        updateState(type: .addedShape(.init(index: shapeCount, shape: shape)))
+        updateState(type: .addedShape(.init(index: shapeCount - 1, shape: shape)))
     }
     
     func insertShapeByIndex(_ index: Int, shape: Shape) throws {

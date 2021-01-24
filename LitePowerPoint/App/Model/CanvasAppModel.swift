@@ -10,6 +10,7 @@ import RxSwift
 
 enum CanvasViewModelError: Error {
     case outOfRange
+    case shapeNotFoundById
 }
 
 struct ActionDataViewState {
@@ -56,6 +57,13 @@ class CanvasAppModel {
         // TODO:
     }
     
+    func deleteShapeById(_ id: String) throws {
+        guard let index = getShapeIndexWhereId(id) else {
+            throw CanvasViewModelError.shapeNotFoundById
+        }
+        try deleteShapeByIndex(index)
+    }
+    
     private func subscribeDomainModel(_ state: Observable<ActionType>) {
         state.subscribe(
             onNext: { value in
@@ -79,5 +87,8 @@ class CanvasAppModel {
     
 }
 
-
-
+extension CanvasAppModel {
+    private func getShapeIndexWhereId(_ id: String) -> Int? {
+        self.shapes.firstIndex(where: { $0.id == id })
+    }
+}

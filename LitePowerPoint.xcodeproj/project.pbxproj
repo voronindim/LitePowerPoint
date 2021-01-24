@@ -19,6 +19,13 @@
 		2859BAAB25BA0E9000BEE87B /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAAA25BA0E9000BEE87B /* Canvas.swift */; };
 		2859BAAF25BA1BEE00BEE87B /* CanvasAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */; };
 		2859BAB325BA1C1500BEE87B /* ShapeAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */; };
+		286B959F25BC7C4F00486FB7 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B959E25BC7C4F00486FB7 /* BackgroundView.swift */; };
+		286B95A225BC7CCA00486FB7 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95A125BC7CCA00486FB7 /* Shapes.swift */; };
+		286B95A525BC801200486FB7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95A425BC801200486FB7 /* UIViewExtension.swift */; };
+		286B95A825BC962000486FB7 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95A725BC961F00486FB7 /* Types.swift */; };
+		286B95AB25BCA5D100486FB7 /* SelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95AA25BCA5D100486FB7 /* SelectedView.swift */; };
+		286B95AE25BCA62B00486FB7 /* Selected.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286B95AD25BCA62B00486FB7 /* Selected.xib */; };
+		286B95B825BCB21E00486FB7 /* ShapeSelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95B725BCB21E00486FB7 /* ShapeSelectedModel.swift */; };
 		9991E73125D3E57E1BE3FE14 /* Pods_LitePowerPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,13 @@
 		2859BAAA25BA0E9000BEE87B /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasAppModel.swift; sourceTree = "<group>"; };
 		2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeAppModel.swift; sourceTree = "<group>"; };
+		286B959E25BC7C4F00486FB7 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		286B95A125BC7CCA00486FB7 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		286B95A425BC801200486FB7 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		286B95A725BC961F00486FB7 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		286B95AA25BCA5D100486FB7 /* SelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedView.swift; sourceTree = "<group>"; };
+		286B95AD25BCA62B00486FB7 /* Selected.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Selected.xib; sourceTree = "<group>"; };
+		286B95B725BCB21E00486FB7 /* ShapeSelectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectedModel.swift; sourceTree = "<group>"; };
 		7D5C76E2A0AE9BF85C0DB775 /* Pods-LitePowerPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitePowerPoint.release.xcconfig"; path = "Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint.release.xcconfig"; sourceTree = "<group>"; };
 		8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LitePowerPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2061EA86913181B4408E87D /* Pods-LitePowerPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitePowerPoint.debug.xcconfig"; path = "Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +101,7 @@
 				2859BAA225BA09C400BEE87B /* Common */,
 				2859BA9C25BA08C100BEE87B /* Domain */,
 				2859BAAD25BA1BDB00BEE87B /* App */,
+				286B959D25BC7AD600486FB7 /* View */,
 				2859BA8025BA078000BEE87B /* AppDelegate.swift */,
 				2859BA8225BA078000BEE87B /* SceneDelegate.swift */,
 				2859BA8425BA078000BEE87B /* ViewController.swift */,
@@ -120,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				2859BAB525BA1C4100BEE87B /* Model */,
+				286B95A725BC961F00486FB7 /* Types.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -128,9 +144,22 @@
 			isa = PBXGroup;
 			children = (
 				2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */,
+				286B95B725BCB21E00486FB7 /* ShapeSelectedModel.swift */,
 				2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		286B959D25BC7AD600486FB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				286B959E25BC7C4F00486FB7 /* BackgroundView.swift */,
+				286B95A125BC7CCA00486FB7 /* Shapes.swift */,
+				286B95A425BC801200486FB7 /* UIViewExtension.swift */,
+				286B95AA25BCA5D100486FB7 /* SelectedView.swift */,
+				286B95AD25BCA62B00486FB7 /* Selected.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2C30F88C48BCE41503E316EB /* Frameworks */ = {
@@ -202,6 +231,7 @@
 			files = (
 				2859BA8D25BA078200BEE87B /* LaunchScreen.storyboard in Resources */,
 				2859BA8A25BA078200BEE87B /* Assets.xcassets in Resources */,
+				286B95AE25BCA62B00486FB7 /* Selected.xib in Resources */,
 				2859BA8825BA078000BEE87B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,13 +285,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286B959F25BC7C4F00486FB7 /* BackgroundView.swift in Sources */,
 				2859BAAB25BA0E9000BEE87B /* Canvas.swift in Sources */,
 				2859BAA825BA0DBE00BEE87B /* CreateRandomUIColor.swift in Sources */,
 				2859BA8525BA078000BEE87B /* ViewController.swift in Sources */,
 				2859BAA425BA09DE00BEE87B /* CommonTypes.swift in Sources */,
 				2859BA8125BA078000BEE87B /* AppDelegate.swift in Sources */,
+				286B95A525BC801200486FB7 /* UIViewExtension.swift in Sources */,
+				286B95AB25BCA5D100486FB7 /* SelectedView.swift in Sources */,
 				2859BAAF25BA1BEE00BEE87B /* CanvasAppModel.swift in Sources */,
+				286B95A825BC962000486FB7 /* Types.swift in Sources */,
 				2859BAB325BA1C1500BEE87B /* ShapeAppModel.swift in Sources */,
+				286B95A225BC7CCA00486FB7 /* Shapes.swift in Sources */,
+				286B95B825BCB21E00486FB7 /* ShapeSelectedModel.swift in Sources */,
 				2859BA8325BA078000BEE87B /* SceneDelegate.swift in Sources */,
 				2859BA9F25BA08EF00BEE87B /* Shape.swift in Sources */,
 			);

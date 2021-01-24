@@ -24,6 +24,17 @@ class ShapeAppModel {
             shape.type
         }
     }
+    var color: UIColor {
+        get {
+            shape.color
+        }
+    }
+    
+    var id: String {
+        get {
+            shape.id
+        }
+    }
     
     private var _viewState = PublishSubject<Rect>()
     private let shape: Shape
@@ -46,6 +57,5 @@ class ShapeAppModel {
             }
         ).disposed(by: disposeBag)
     }
-    
     
 }

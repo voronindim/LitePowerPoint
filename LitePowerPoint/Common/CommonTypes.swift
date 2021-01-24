@@ -17,7 +17,7 @@ struct Point: Equatable {
     let y: Double
 }
 
-struct Rect: Equatable {
+public struct Rect: Equatable {
     let leftTop: Point
     let size: Size
 }

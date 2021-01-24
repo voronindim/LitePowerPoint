@@ -1,24 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LitePowerPoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtH-vt-h9B" userLabel="Commands">
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Uo-V6-Qgz">
+                                        <rect key="frame" x="116.5" y="13.5" width="181" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csn-Lf-O9p">
+                                                <rect key="frame" x="0.0" y="0.0" width="53" height="38"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
+                                                <state key="normal" title="delete"/>
+                                                <connections>
+                                                    <action selector="deleteShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HyO-KE-y9d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIn-jd-OpG">
+                                                <rect key="frame" x="61" y="0.0" width="56" height="38"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9s-qU-eaK">
+                                                <rect key="frame" x="125" y="0.0" width="56" height="38"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="O9l-li-SJV"/>
+                                    <constraint firstItem="7Uo-V6-Qgz" firstAttribute="centerY" secondItem="WtH-vt-h9B" secondAttribute="centerY" id="UD8-Qg-0Np"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="lyx-R5-MNd"/>
+                                    <constraint firstItem="7Uo-V6-Qgz" firstAttribute="centerX" secondItem="WtH-vt-h9B" secondAttribute="centerX" id="rUF-HI-9fP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9Q-SL-XEE" userLabel="Canvas">
+                                <rect key="frame" x="0.0" y="109" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-d2-eLB" userLabel="Shape Action">
+                                <rect key="frame" x="0.0" y="797" width="414" height="65"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Sz-ES-8H3">
+                                        <rect key="frame" x="29.5" y="0.0" width="355.5" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dq-Eb-6Hi">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="65"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="Rectangle" image="rectangle.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createRectangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWR-o7-JDr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-z7-kid">
+                                                <rect key="frame" x="142" y="0.0" width="92" height="65"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="Ellipse" image="circle.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createEllipse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xMt-oB-TUu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-BV-rwN">
+                                                <rect key="frame" x="251" y="0.0" width="104.5" height="65"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <state key="normal" title="Triangle" image="triangle.fill" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="createTraingle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ZK-hv-e3s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Sz-ES-8H3" firstAttribute="centerX" secondItem="zBI-d2-eLB" secondAttribute="centerX" id="HvV-9s-Ugp"/>
+                                    <constraint firstAttribute="height" constant="65" id="KPU-eo-Dzx"/>
+                                    <constraint firstItem="2Sz-ES-8H3" firstAttribute="top" secondItem="zBI-d2-eLB" secondAttribute="top" id="MrJ-Om-rpS"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Sz-ES-8H3" secondAttribute="bottom" id="wZj-lW-n9V"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zBI-d2-eLB" firstAttribute="top" secondItem="M9Q-SL-XEE" secondAttribute="bottom" id="0Ul-JW-RSB"/>
+                            <constraint firstItem="WtH-vt-h9B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5p7-Sh-OmZ"/>
+                            <constraint firstItem="WtH-vt-h9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FWG-1h-zul"/>
+                            <constraint firstItem="M9Q-SL-XEE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IQA-jn-L7G"/>
+                            <constraint firstItem="zBI-d2-eLB" firstAttribute="top" secondItem="M9Q-SL-XEE" secondAttribute="bottom" id="LlL-mm-owb"/>
+                            <constraint firstItem="zBI-d2-eLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T7J-VP-H0l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zBI-d2-eLB" secondAttribute="bottom" id="bYC-PZ-Q9e"/>
+                            <constraint firstItem="WtH-vt-h9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eFa-Ad-3cA"/>
+                            <constraint firstItem="M9Q-SL-XEE" firstAttribute="top" secondItem="WtH-vt-h9B" secondAttribute="bottom" id="hAq-V6-15b"/>
+                            <constraint firstItem="M9Q-SL-XEE" firstAttribute="top" secondItem="WtH-vt-h9B" secondAttribute="bottom" id="pej-tk-mQL"/>
+                            <constraint firstItem="M9Q-SL-XEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wbK-uF-z5q"/>
+                            <constraint firstItem="zBI-d2-eLB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xpB-BP-3dd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="canvasView" destination="M9Q-SL-XEE" id="XmF-sG-itK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="triangle.fill" catalog="system" width="128" height="112"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
