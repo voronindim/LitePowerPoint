@@ -13,12 +13,14 @@ enum SelectionViewModelError: Error {
     case shapeByIdNotFound
 }
 
+typealias ShapeId = String
+
 enum SelectionActionViewState {
     case addSelection(ShapeAppModel)
-    case removeSelection(Int)
+    case removeSelection(ShapeId)
 }
 
-class ShapeSelectedModel {
+class SelectionModel {
     var viewState: Observable<SelectionActionViewState> {
         get {
             _viewState
@@ -46,16 +48,13 @@ class ShapeSelectedModel {
         guard let index = findOneShapeIndexById(shapeId) else {
             throw SelectionViewModelError.shapeByIdNotFound
         }
+        self._viewState.onNext(.removeSelection(shapeId))
         self.selectedShapes.remove(at: index)
     }
     
-//    func cleanSelection() {
-//        self.selectedShapes.removeAll()
-//    }
-    
 }
 
-extension ShapeSelectedModel {
+extension SelectionModel {
     private func findOneShapeIndexById(_ shapeId: String) -> Int? {
         self.selectedShapes.firstIndex(where: { $0.id == shapeId })
     }

@@ -14,8 +14,6 @@ class SelectedView: UIView {
     @IBOutlet var rightTop: UIImageView!
     @IBOutlet var rightBottom: UIImageView!
     
-    
-    
     enum Edge {
         case topLeft, topRight, bottomLeft, bottomRight, none
     }
@@ -26,10 +24,9 @@ class SelectedView: UIView {
     var currentEdge: Edge = .none
     var touchStart = CGPoint.zero
     
-    
     var doOnChangeFrame: DoOnChangeFrameHandler?
     var removeSelection: RemoveSelectionHandler?
-    
+    private var shapeId: String?
     private var selfFrame: Rect {
         get {
             Rect(leftTop: .init(x: Double(self.frame.minX), y: Double(self.frame.minY)), size: .init(width: Double(self.frame.width), hegiht: Double(self.frame.height)))
@@ -45,6 +42,15 @@ class SelectedView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    func setShapeId(_ id: String) {
+        self.shapeId = id
+    }
+    
+    func getShapeId() -> String {
+        self.shapeId ?? ""
+    }
+    
     
     private func setBorder() {
         self.layer.borderWidth = 5

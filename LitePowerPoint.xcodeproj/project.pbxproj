@@ -25,7 +25,7 @@
 		286B95A825BC962000486FB7 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95A725BC961F00486FB7 /* Types.swift */; };
 		286B95AB25BCA5D100486FB7 /* SelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95AA25BCA5D100486FB7 /* SelectedView.swift */; };
 		286B95AE25BCA62B00486FB7 /* Selected.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286B95AD25BCA62B00486FB7 /* Selected.xib */; };
-		286B95B825BCB21E00486FB7 /* ShapeSelectedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95B725BCB21E00486FB7 /* ShapeSelectedModel.swift */; };
+		286B95B825BCB21E00486FB7 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B95B725BCB21E00486FB7 /* SelectionModel.swift */; };
 		9991E73125D3E57E1BE3FE14 /* Pods_LitePowerPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +50,7 @@
 		286B95A725BC961F00486FB7 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		286B95AA25BCA5D100486FB7 /* SelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedView.swift; sourceTree = "<group>"; };
 		286B95AD25BCA62B00486FB7 /* Selected.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Selected.xib; sourceTree = "<group>"; };
-		286B95B725BCB21E00486FB7 /* ShapeSelectedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectedModel.swift; sourceTree = "<group>"; };
+		286B95B725BCB21E00486FB7 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 		7D5C76E2A0AE9BF85C0DB775 /* Pods-LitePowerPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitePowerPoint.release.xcconfig"; path = "Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint.release.xcconfig"; sourceTree = "<group>"; };
 		8F921496FD2D0F424ED948C5 /* Pods_LitePowerPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LitePowerPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2061EA86913181B4408E87D /* Pods-LitePowerPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LitePowerPoint.debug.xcconfig"; path = "Target Support Files/Pods-LitePowerPoint/Pods-LitePowerPoint.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				2859BAAE25BA1BEE00BEE87B /* CanvasAppModel.swift */,
-				286B95B725BCB21E00486FB7 /* ShapeSelectedModel.swift */,
+				286B95B725BCB21E00486FB7 /* SelectionModel.swift */,
 				2859BAB225BA1C1500BEE87B /* ShapeAppModel.swift */,
 			);
 			path = Model;
@@ -297,7 +297,7 @@
 				286B95A825BC962000486FB7 /* Types.swift in Sources */,
 				2859BAB325BA1C1500BEE87B /* ShapeAppModel.swift in Sources */,
 				286B95A225BC7CCA00486FB7 /* Shapes.swift in Sources */,
-				286B95B825BCB21E00486FB7 /* ShapeSelectedModel.swift in Sources */,
+				286B95B825BCB21E00486FB7 /* SelectionModel.swift in Sources */,
 				2859BA8325BA078000BEE87B /* SceneDelegate.swift in Sources */,
 				2859BA9F25BA08EF00BEE87B /* Shape.swift in Sources */,
 			);

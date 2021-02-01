@@ -17,10 +17,10 @@ class ViewController: UIViewController {
     
     var selectedShapeHandler: SelectedShapeHandler?
     var canvasViewModel = CanvasAppModel(canvas: .init(shapes: []))
-    var shapeSelectedModel = ShapeSelectedModel()
+    var shapeSelectedModel = SelectionModel()
     
     // MARK: Private Properties
-    
+    private var selectionVies = [SelectedView]()
     private var defaultShapeSize: Size {
         .init(width: Double(canvasView.bounds.width / 5), hegiht: Double(canvasView.bounds.height / 5))
     }
@@ -100,6 +100,8 @@ class ViewController: UIViewController {
         case .addSelection(let shape):
             let selectedView = SelectedView(frame: .init(rect: shape.frame))
             canvasView.addSubview(selectedView)
+            selectedView.setShapeId(shape.id)
+            selectionVies.append(selectedView)
             selectedView.removeSelection = {[weak self] in
                 try? self?.shapeSelectedModel.removeSelection(shapeId: shape.id)
                 selectedView.removeFromSuperview()
@@ -107,8 +109,10 @@ class ViewController: UIViewController {
             selectedView.doOnChangeFrame = { frame in
                 shape.doOnChangeFrame(frame)
             }
-        case .removeSelection(_):
-            break
+        case .removeSelection(let shapeId):
+            print(shapeId)
+            selectionVies.first(where: { $0.getShapeId() == shapeId })?.removeFromSuperview()
+            try? canvasViewModel.deleteShapeById(shapeId)
         }
     }
     
@@ -124,7 +128,7 @@ class ViewController: UIViewController {
     
     private func deleteSelectionShapes() {
         _ = self.shapeSelectedModel.shapesIds.map({
-            try? canvasViewModel.deleteShapeById($0)
+            try? self.shapeSelectedModel.removeSelection(shapeId: $0)
         })
     }
     
