@@ -18,6 +18,7 @@ typealias ShapeId = String
 enum SelectionActionViewState {
     case addSelection(ShapeAppModel)
     case removeSelection(ShapeId)
+    case removeShapes(ShapeId)
 }
 
 class SelectionModel {
@@ -52,10 +53,16 @@ class SelectionModel {
         self.selectedShapes.remove(at: index)
     }
     
+    func removeShapes(shapeId: String) {
+        try? removeSelection(shapeId: shapeId)
+        self._viewState.onNext(.removeShapes(shapeId))
+    }
+    
 }
 
 extension SelectionModel {
     private func findOneShapeIndexById(_ shapeId: String) -> Int? {
-        self.selectedShapes.firstIndex(where: { $0.id == shapeId })
+        let index = self.selectedShapes.firstIndex(where: { $0.id == shapeId })
+        return index
     }
 }

@@ -104,14 +104,16 @@ class ViewController: UIViewController {
             selectionVies.append(selectedView)
             selectedView.removeSelection = {[weak self] in
                 try? self?.shapeSelectedModel.removeSelection(shapeId: shape.id)
-                selectedView.removeFromSuperview()
             }
             selectedView.doOnChangeFrame = { frame in
                 shape.doOnChangeFrame(frame)
             }
         case .removeSelection(let shapeId):
             print(shapeId)
-            selectionVies.first(where: { $0.getShapeId() == shapeId })?.removeFromSuperview()
+            let index = selectionVies.firstIndex(where: { $0.getShapeId() == shapeId })
+            selectionVies[index!].removeFromSuperview()
+            selectionVies.remove(at: index!)
+        case .removeShapes(let shapeId):
             try? canvasViewModel.deleteShapeById(shapeId)
         }
     }
@@ -128,7 +130,7 @@ class ViewController: UIViewController {
     
     private func deleteSelectionShapes() {
         _ = self.shapeSelectedModel.shapesIds.map({
-            try? self.shapeSelectedModel.removeSelection(shapeId: $0)
+            self.shapeSelectedModel.removeShapes(shapeId: $0)
         })
     }
     
