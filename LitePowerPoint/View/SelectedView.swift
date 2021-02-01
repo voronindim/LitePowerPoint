@@ -119,3 +119,10 @@ extension SelectedView {
         doOnChangeFrame?(selfFrame)
     }
 }
+
+extension SelectedView {
+    static func createFromNib() -> Self {
+        let nib = UINib(nibName: "Selected", bundle: Bundle(for: SelectedView.self))
+        return nib.instantiate(withOwner: self, options: nil).first as! Self
+    }
+}

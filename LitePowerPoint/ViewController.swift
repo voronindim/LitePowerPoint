@@ -98,6 +98,8 @@ class ViewController: UIViewController {
     private func handleSelectionViewState(state: SelectionActionViewState) {
         switch state {
         case .addSelection(let shape):
+//            let selectedView = SelectedView.createFromNib()
+//            selectedView.frame = .init(rect: shape.frame)
             let selectedView = SelectedView(frame: .init(rect: shape.frame))
             canvasView.addSubview(selectedView)
             selectedView.setShapeId(shape.id)

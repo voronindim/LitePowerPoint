@@ -27,7 +27,6 @@ class EllipseView: UIView {
 class RectangleView: UIView {
     private var color: UIColor = defaultColor
     
-    
     override func draw(_ rect: CGRect) {
         let rectanglePath = UIBezierPath()
         rectanglePath.move(to: .init(x: rect.minX, y: rect.minY))

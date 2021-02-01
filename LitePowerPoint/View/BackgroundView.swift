@@ -15,7 +15,6 @@ class BackgroundView: UIView {
         Rect(leftTop: .init(x: Double(self.frame.minX), y: Double(self.frame.minY)), size: .init(width: Double(self.frame.width), hegiht: Double(self.frame.height)))
     }
     private let disposeBag = DisposeBag()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
