@@ -129,9 +129,9 @@ class ViewController: UIViewController {
     }
     
     private func deleteSelectionShapes() {
-        _ = self.shapeSelectedModel.shapesIds.map({
-            self.shapeSelectedModel.removeShapes(shapeId: $0)
-        })
+        for id in self.shapeSelectedModel.shapesIds {
+            self.shapeSelectedModel.removeShapes(shapeId: id)
+        }
     }
     
     private func appendDefaultShape(_ type: ShapeType) {
@@ -156,7 +156,12 @@ class ViewController: UIViewController {
     
 }
 
-
+extension ViewController {
+    static func instatiateFromStoryboard() -> ViewController? {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: ViewController.self))
+        return storyboard.instantiateViewController(identifier: "Main")
+    }
+}
 
 extension CGRect {
     public init(rect: Rect) {

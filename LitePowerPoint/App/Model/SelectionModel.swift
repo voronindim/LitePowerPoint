@@ -62,7 +62,6 @@ class SelectionModel {
 
 extension SelectionModel {
     private func findOneShapeIndexById(_ shapeId: String) -> Int? {
-        let index = self.selectedShapes.firstIndex(where: { $0.id == shapeId })
-        return index
+        self.selectedShapes.firstIndex(where: { $0.id == shapeId })
     }
 }
