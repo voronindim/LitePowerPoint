@@ -21,8 +21,8 @@ class SelectedView: UIView {
     static var edgeSize: CGFloat = 12.0
     private typealias Item = SelectedView
     
-    var currentEdge: Edge = .none
-    var touchStart = CGPoint.zero
+    private var currentEdge: Edge = .none
+    private var touchStart = CGPoint.zero
     
     var doOnChangeFrame: DoOnChangeFrameHandler?
     var removeSelection: RemoveSelectionHandler?
