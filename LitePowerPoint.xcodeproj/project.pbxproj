@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282FD76F25C9BF82001C239E /* UseFileGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282FD76E25C9BF82001C239E /* UseFileGateway.swift */; };
+		282FD77625C9C024001C239E /* UseFileGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282FD77525C9C024001C239E /* UseFileGatewayImpl.swift */; };
 		2859BA8125BA078000BEE87B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA8025BA078000BEE87B /* AppDelegate.swift */; };
 		2859BA8325BA078000BEE87B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA8225BA078000BEE87B /* SceneDelegate.swift */; };
 		2859BA8525BA078000BEE87B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BA8425BA078000BEE87B /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		282FD76E25C9BF82001C239E /* UseFileGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseFileGateway.swift; sourceTree = "<group>"; };
+		282FD77525C9C024001C239E /* UseFileGatewayImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseFileGatewayImpl.swift; sourceTree = "<group>"; };
 		2859BA7D25BA078000BEE87B /* LitePowerPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LitePowerPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2859BA8025BA078000BEE87B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2859BA8225BA078000BEE87B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,48 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		282FD76A25C9BF07001C239E /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				282FD77325C9BFFC001C239E /* Gateways */,
+				2859BAB525BA1C4100BEE87B /* Model */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		282FD76B25C9BF53001C239E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2859BA9E25BA08EF00BEE87B /* Shape.swift */,
+				2859BAAA25BA0E9000BEE87B /* Canvas.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		282FD76C25C9BF5D001C239E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				282FD76D25C9BF6A001C239E /* Gateways */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		282FD76D25C9BF6A001C239E /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				282FD76E25C9BF82001C239E /* UseFileGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		282FD77325C9BFFC001C239E /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				282FD77525C9C024001C239E /* UseFileGatewayImpl.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
 		2859BA7425BA078000BEE87B = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +162,8 @@
 		2859BA9C25BA08C100BEE87B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				2859BA9E25BA08EF00BEE87B /* Shape.swift */,
-				2859BAAA25BA0E9000BEE87B /* Canvas.swift */,
+				282FD76C25C9BF5D001C239E /* UseCases */,
+				282FD76B25C9BF53001C239E /* Model */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -134,7 +180,7 @@
 		2859BAAD25BA1BDB00BEE87B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2859BAB525BA1C4100BEE87B /* Model */,
+				282FD76A25C9BF07001C239E /* Infrastructure */,
 				286B95A725BC961F00486FB7 /* Types.swift */,
 			);
 			path = App;
@@ -291,8 +337,10 @@
 				2859BA8525BA078000BEE87B /* ViewController.swift in Sources */,
 				2859BAA425BA09DE00BEE87B /* CommonTypes.swift in Sources */,
 				2859BA8125BA078000BEE87B /* AppDelegate.swift in Sources */,
+				282FD76F25C9BF82001C239E /* UseFileGateway.swift in Sources */,
 				286B95A525BC801200486FB7 /* UIViewExtension.swift in Sources */,
 				286B95AB25BCA5D100486FB7 /* SelectedView.swift in Sources */,
+				282FD77625C9C024001C239E /* UseFileGatewayImpl.swift in Sources */,
 				2859BAAF25BA1BEE00BEE87B /* CanvasAppModel.swift in Sources */,
 				286B95A825BC962000486FB7 /* Types.swift in Sources */,
 				2859BAB325BA1C1500BEE87B /* ShapeAppModel.swift in Sources */,

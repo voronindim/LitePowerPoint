@@ -20,6 +20,7 @@ class EllipseView: UIView {
     }
     
     func setColor(_ color: UIColor) {
+        self.backgroundColor = .clear
         self.color = color
     }
 }
@@ -39,6 +40,7 @@ class RectangleView: UIView {
     }
     
     func setColor(_ color: UIColor) {
+        self.backgroundColor = .clear
         self.color = color
     }
 }
@@ -57,6 +59,7 @@ class TriangleView: UIView {
     }
     
     func setColor(_ color: UIColor) {
+        self.backgroundColor = .clear
         self.color = color
     }
 }
